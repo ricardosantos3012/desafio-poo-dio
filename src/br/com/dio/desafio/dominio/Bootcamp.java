@@ -67,4 +67,20 @@ public class Bootcamp {
     public int hashCode() {
         return Objects.hash(nome, descricao, dataInicial, dataFinal, devsInscritos, conteudos);
     }
+    
+    public Curso adicionaCurso(String titulo, String descricao, int cargaHoraria) {
+    	Curso novoCurso = new Curso();
+    	novoCurso.setTitulo(titulo);
+    	novoCurso.setDescricao(descricao);
+    	novoCurso.setCargaHoraria(cargaHoraria);
+		return novoCurso;
+    }
+    
+    public Mentoria adicionaMentoria(String titulo, String descricao) {
+    	Mentoria mentoria = new Mentoria();
+        mentoria.setTitulo(titulo);
+        mentoria.setDescricao(descricao);
+        mentoria.setData(LocalDate.now());
+        return mentoria;
+    }
 }
